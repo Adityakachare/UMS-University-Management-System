@@ -111,10 +111,6 @@ def stupdate():
 def ptt():
     return render_template('misc/ptt.html')
 
-@app.route('/phome')
-def phome():
-    return render_template('principal/phome.html')
-
 
 @app.route('/pexamsch')
 def pexamsch():
@@ -333,6 +329,16 @@ def pt():
 #     mycursor.execute("SELECT * FROM new_teacher")
 #     result = mycursor.fetchall()
 #     return render_template('misc/pt.html', result=result)
+
+@app.route('/phome')
+def phome():
+    return render_template('principal/phome.html')
+
+@app.route('/phome')
+def pnoti():
+    mycursor.execute("SELECT * FROM new_student")
+    notis = mycursor.fetchall()
+    return render_template("ps.html", notis=notis)
 
 
 if __name__ == '__main__':

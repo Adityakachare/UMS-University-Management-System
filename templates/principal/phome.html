@@ -367,137 +367,21 @@
             <h1 align="center">Notifications</h1>
             <div class="scroll">
                 <table>
-                    <tr>
-                        <th width="10px">Sr.No.</th>
+                    <thead>
+                      <tr>
+                        <th style="width: 10%;">Sr. No.</th>
                         <th>Notification</th>
-                        <th>-</th>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                    </tr>
-
-                    <tr>
-                        <td>1</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                    </tr>
-
-                    <tr>
-                        <td>1</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                    </tr>
-
-                    <tr>
-                        <td>1</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                    </tr>
-
-
-                </table>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for row in notis %}
+                      <tr>
+                        <td>{{ notis[0] }}</td>
+                        <td>{{ notis[1] }}</td>
+                      </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
             </div>
         </div>
 
