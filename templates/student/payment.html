@@ -1,0 +1,527 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Spark University</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="{{url_for('static',filename='css/open-iconic-bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{url_for('static',filename='css/animate.css')}}">
+
+  <link rel="stylesheet" href="{{url_for('static',filename='css/owl.carousel.min.css')}}">
+  <link rel="stylesheet" href="{{url_for('static',filename='css/owl.theme.default.min.css')}}">
+  <link rel="stylesheet" href="{{url_for('static',filename='css/magnific-popup.css')}}">
+
+  <link rel="stylesheet" href="{{url_for('static',filename='css/aos.css')}}">
+
+  <link rel="stylesheet" href="{{url_for('static',filename='css/ionicons.min.css')}}">
+
+  <link rel="stylesheet" href="{{url_for('static',filename='css/flaticon.css')}}">
+  <link rel="stylesheet" href="{{url_for('static',filename='css/icomoon.css')}}">
+  <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+
+</head>
+<style>
+   * {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+/*Card containing 2 cards*/
+.card0 {
+	margin: 40px 12px 15px 12px;
+    border: 0;
+}
+
+/*Left Side card*/
+.card1 {
+	margin: 0;
+	padding: 15px;
+	padding-top: 25px;
+	padding-bottom: 0px;
+	background: #263238;
+	height: 100%;
+}
+
+.bill-head {
+	color: #ffffff;
+	font-weight: bold;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	font-size: 30px;
+}
+
+.line {
+	border-right: 1px grey solid;
+}
+
+.bill-date {
+	color: #BDBDBD;
+}
+
+.red-bg {
+	margin-top: 25px;
+	margin-left: 0px;
+	margin-right: 0px;
+	background-color: #F44336;
+	padding-left: 20px !important;
+	padding: 25px 10px 25px 15px;
+}
+
+#total {
+	margin-top: 0px;
+	padding-left: 7px;
+}
+
+#total-label {
+	margin-bottom: 0px;
+	color: #ffffff;
+	padding-left: 7px;
+}
+
+#heading1 {
+	color: #ffffff;
+	font-size: 20px;
+	padding-left: 10px;
+}
+
+#heading2 {
+	font-size: 27px;
+	color: #D50000;
+}
+
+/*For font-awesome icons in Placeholder*/
+.placeicon {
+	font-family: fontawesome !important;
+}
+
+/*Right Side Card*/
+.card2 {
+	padding: 25px;
+	margin: 0;
+	height: 100%;
+}
+
+.form-card .pay {
+	font-weight: bold;
+}
+
+.form-card input, .form-card textarea {
+    padding: 10px 8px 10px 8px;
+    border: none;
+    border: 1px solid lightgrey;
+    border-radius: 0px;
+    margin-bottom: 25px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.form-card input:focus, .form-card textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: none;
+    font-weight: bold;
+    border: 1px solid gray;
+    outline-width: 0;
+}
+
+.btn-info {
+	color: #ffffff !important;
+}
+
+/*Imaged Radio Buttons*/
+.radio-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.radio {
+    display:inline-block;
+    width: 204;
+    height: 64;
+    border-radius: 0;
+    background: lightblue;
+    box-sizing: border-box;
+    border: 2px solid lightgrey;
+    cursor:pointer;
+    margin: 8px 25px 8px 0px; 
+}
+
+.radio:hover {
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
+}
+
+.radio.selected {
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.4);
+}
+
+/*Fit image in bootstrap div*/
+.fit-image{
+    width: 100%;
+    object-fit: cover;
+}
+.thead-light{
+    background-color: rgba(255, 228, 194, 0.952)
+}
+.text-muted{
+    height: 46.7px;
+    margin-top: 1.3px;
+    border-radius: 0%;
+}
+.image{
+    width: auto;
+}
+</style>
+
+
+
+<body>
+    <div class="bg-top navbar-light">
+    	<div class="container">
+    		<div class="row no-gutters d-flex align-items-center align-items-stretch">
+    			<div class="col-md-4 d-flex align-items-center py-4">
+					<img style="border-radius: 50px;" class="mr-2"
+            src="{{url_for('static',filename='./images/universitylogo3.jpg')}}" width="80" alt="">
+          <a class="navbar-brand" href="{{url_for('index')}}">Spark<span>University</span></a>
+    			</div>
+	    		<div class="col-lg-8 d-block">
+		    		<div class="row d-flex">
+					    <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
+					    	<div class="icon d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+					    	<div class="text">
+					    		<span>Email</span>
+						    	<span>sparkuniversity@email.com</span>
+						    </div>
+					    </div>
+					    <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
+					    	<div class="icon d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
+						    <div class="text">
+						    	<span>Call</span>
+						    	<span>Call Us: +91 1234567890</span>
+						    </div>
+					    </div>
+						<!-- <div class="col-md topper d-flex align-items-center justify-content-end">
+					    	<p class="mb-0">
+					    		<a href="login.html" class="btn py-2 px-3 btn-primary d-flex align-items-center justify-content-center">
+					    			<span>Login</span>
+					    		</a>
+					    	</p>
+					    </div> -->
+					    <!-- <div class="col-md topper d-flex align-items-center justify-content-end">
+					    	<p class="mb-0">
+					    		<a href="#" class="btn py-2 px-3 btn-primary d-flex align-items-center justify-content-center">
+					    			<span>Log in</span>
+					    		</a>
+					    	</p>
+					    </div> -->
+				    </div>
+			    </div>
+		    </div>
+		</div>
+   	</div>
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container d-flex align-items-center px-4">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+            <form action="#" class="searchform order-lg-last">
+                <div class="form-group d-flex">
+                    <input type="text" class="form-control pl-3" placeholder="Search">
+                    <button type="submit" placeholder="" class="form-control search"><span
+                            class="ion-ios-search"></span></button>
+                </div>
+            </form>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link pl-0">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="courses.html" class="nav-link">Courses</a></li>
+                    <li class="nav-item "><a href="teacher.html" class="nav-link">Staff</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav> -->
+    <!-- END nav -->
+
+    <section class="hero-wrap hero-wrap-2"
+    style="background-image: url({{url_for('static',filename='images/bg_1.jpg')}});">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text align-items-center justify-content-center">
+                <div class="col-md-9 ftco-animate text-center">
+                    <h1 class="mb-2 bread">Payment</h1>
+                    <!-- <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> -->
+                </div> 
+            </div>
+        </div>
+    </section>
+
+    <section class="thead-light">
+        <div class="payment-main">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-11"> 
+                    <div class="card card0 rounded-0">
+                        <div class="row ">
+                            <div class="col-md-5 d-md-block d-none p-0 box">
+                                
+
+                                
+                                <img src="{{url_for('static',filename='./images/payment.jpg')}}" width="834" height="650"/>
+                            
+                            </div>
+        
+                            <div class="col-md-7 col-sm-12 p-0 box">
+                                <div class="card rounded-0 border-0 card2" id="paypage">
+                                    <form action="#" class="form-card"> 
+                                        <h2 id="heading2" class="text-danger">Payment Method</h2>
+                                        <div class="radio-group">
+                                            <div class='radio' data-value="credit"><img src="{{url_for('static',filename='./images/payment_visa.jpg')}}" width="200px" height="60px"></div>
+                                            <div class='radio' data-value="paypal"><img src="{{url_for('static',filename='./images/payment_paypal.jpg')}}" width="200px" height="60px"></div>
+                                            <br>
+                                        </div>
+                                        <label class="pay">Name on Card</label>
+                                        <input type="text" name="holdername" required placeholder="Cardholder Name">
+                                        <div class="row">
+                                            <div class="col-8 col-md-6">
+                                                <label class="pay">Card Number</label>
+                                               <div class="input-group-append"> <input type="text" required name="cardno" id="cr_no" placeholder="1234-3456-5678-7890" minlength="19" maxlength="19">
+                                                <span class="input-group-text text-muted"> <i class="fab fa-cc-visa mx-1"></i> <i class="fab fa-cc-mastercard mx-1"></i> <i class="fab fa-cc-amex mx-1"></i> </span></div>
+                                            </div>
+                                            <div class="col-4 col-md-6">
+                                                <label class="pay">CVV</label>
+                                                <input type="password" required name="cvcpwd" placeholder="&#9679;&#9679;&#9679;" class="placeicon" minlength="3" maxlength="3">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label class="pay">Expiration Date</label>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <input type="text" required name="exp" id="exp" placeholder="MM/YY" minlength="5" maxlength="5">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <input type="submit" value="MAKE A PAYMENT &nbsp; &#xf178;" class="btn btn-info placeicon">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-md-6 col-lg-3">
+              <div class="ftco-footer-widget mb-5">
+                <h2 class="ftco-heading-2">Have a Question?</h2>
+                <div class="block-23 mb-3">
+                  <ul>
+                    <li><span class="icon icon-map-marker"></span><span class="text">198 West 21th Street,
+                        Suite 721 New York NY 10016</span></li>
+                    <li><a href="#"><span class="icon icon-phone"></span><span class="text">+91
+                          8989676745</span></a></li>
+                    <li><a href="#"><span class="icon icon-envelope"></span><span
+                          class="text">sparkuniversity@email.com</span></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="ftco-footer-widget mb-5">
+                <h2 class="ftco-heading-2">Upcoming Events!</h2>
+                <div class="block-21 mb-4 d-flex">
+                  <a class="blog-img mr-4"
+                    style="background-image: url({{url_for('static',filename='images/dataaa.avif')}});"></a>
+                  <div class="text">
+                    <h3 class="heading"><a href="{{url_for('blog')}}">Data Dive</a></h3>
+                    <div class="meta">
+                      <div><a href="#"><span class="icon-calendar"></span> Feburary 12, 2023</a></div>
+                      <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                      <div><a href="#"><span class="icon-chat"></span> 29</a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="block-21 mb-5 d-flex">
+                  <a class="blog-img mr-4"
+                    style="background-image: url({{url_for('static',filename='images/music.jpg')}});"></a>
+                  <div class="text">
+                    <h3 class="heading"><a href="{{url_for('blog')}}">Ultra Music Festival</a></h3>
+                    <div class="meta">
+                      <div><a href="#"><span class="icon-calendar"></span> Feburary 23, 2023</a></div>
+                      <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                      <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="ftco-footer-widget mb-5 ml-md-4">
+                <h2 class="ftco-heading-2">Links</h2>
+                <ul class="list-unstyled">
+                  <li><a href="{{url_for('index')}}"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
+                  <li><a href="{{url_for('about')}}"><span class="ion-ios-arrow-round-forward mr-2"></span>About</a>
+                  </li>
+                  <li><a href="{{url_for('courses')}}"><span class="ion-ios-arrow-round-forward mr-2"></span>Student
+                      Admission</a></li>
+                  <li><a href="{{url_for('teacher')}}"><span class="ion-ios-arrow-round-forward mr-2"></span>Staff</a>
+                  </li>
+                  <li><a href="{{url_for('blog')}}"><span class="ion-ios-arrow-round-forward mr-2"></span>Events</a>
+                  </li>
+                  <li><a href="{{url_for('contact_new')}}"><span class="ion-ios-arrow-round-forward mr-2"></span>Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="ftco-footer-widget mb-5">
+                <h2 class="ftco-heading-2">Contact Us!</h2>
+                <form action="{{url_for('contact_new')}}" class="subscribe-form">
+                  <div class="form-group">
+                    <a href="{{url_for('contact_new')}}"><input type="submit" value="Redirect"
+                        class="form-control submit px-3"></a>
+                  </div>
+                </form>
+              </div>
+              <div class="ftco-footer-widget mb-5">
+                <h2 class="ftco-heading-2 mb-0">Connect With Us</h2>
+                <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+                  <li class="ftco-animate"><a href="https://twitter.com/?lang=en"><span class="icon-twitter"></span></a>
+                  </li>
+                  <li class="ftco-animate"><a href="https://www.facebook.com/"><span class="icon-facebook"></span></a></li>
+                  <li class="ftco-animate"><a href="https://www.instagram.com/?__coig_restricted=1"><span
+                        class="icon-instagram"></span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 text-center">
+    
+              <p>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;
+                <script>document.write(new Date().getFullYear());</script> All rights reserved |
+                @sparkuniversity <i class="icon-heart" aria-hidden="true"></i>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    
+    
+      <!-- loader -->
+      <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+          <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+          <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+            stroke="#F96D00" />
+        </svg></div>
+    
+    
+      <script src="{{url_for('static',filename='js/jquery.min.js')}}"></script>
+      <script src="{{url_for('static',filename='js/jquery-migrate-3.0.1.min.js')}}"></script>
+      <script src="{{url_for('static',filename='js/popper.min.js')}}"></script>
+      <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+      <script src="{{url_for('static',filename='js/jquery.easing.1.3.js')}}"></script>
+      <script src="{{url_for('static',filename='js/jquery.waypoints.min.js')}}"></script>
+      <script src="{{url_for('static',filename='js/jquery.stellar.min.js')}}"></script>
+      <script src="{{url_for('static',filename='js/owl.carousel.min.js')}}"></script>
+      <script src="{{url_for('static',filename='js/jquery.magnific-popup.min.js')}}"></script>
+      <script src="{{url_for('static',filename='js/aos.js')}}"></script>
+      <script src="{{url_for('static',filename='js/jquery.animateNumber.min.js')}}"></script>
+      <script src="{{url_for('static',filename='js/scrollax.min.js')}}"></script>
+      <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+      <script src="{{url_for('static',filename='js/google-map.js')}}"></script>
+      <script src="{{url_for('static',filename='js/main.js')}}"></script>
+    <script>
+        $(document).ready(function(){
+    
+    //For Card Number formatted input
+    var cardNum = document.getElementById('cr_no');
+    cardNum.onkeyup = function (e) {
+        if (this.value == this.lastValue) return;
+        var caretPosition = this.selectionStart;
+        var sanitizedValue = this.value.replace(/[^0-9]/gi, '');
+        var parts = [];
+        
+        for (var i = 0, len = sanitizedValue.length; i < len; i += 4) {
+            parts.push(sanitizedValue.substring(i, i + 4));
+        }
+        
+        for (var i = caretPosition - 1; i >= 0; i--) {
+            var c = this.value[i];
+            if (c < '0' || c > '9') {
+                caretPosition--;
+            }
+        }
+        caretPosition += Math.floor(caretPosition / 4);
+        
+        this.value = this.lastValue = parts.join('-');
+        this.selectionStart = this.selectionEnd = caretPosition;
+    }
+    
+    //For Date formatted input
+    var expDate = document.getElementById('exp');
+    expDate.onkeyup = function (e) {
+        if (this.value == this.lastValue) return;
+        var caretPosition = this.selectionStart;
+        var sanitizedValue = this.value.replace(/[^0-9]/gi, '');
+        var parts = [];
+        
+        for (var i = 0, len = sanitizedValue.length; i < len; i += 2) {
+            parts.push(sanitizedValue.substring(i, i + 2));
+        }
+        
+        for (var i = caretPosition - 1; i >= 0; i--) {
+            var c = this.value[i];
+            if (c < '0' || c > '9') {
+                caretPosition--;
+            }
+        }
+        caretPosition += Math.floor(caretPosition / 2);
+        
+        this.value = this.lastValue = parts.join('/');
+        this.selectionStart = this.selectionEnd = caretPosition;
+        
+    }
+    
+    // Radio button
+    $('.radio-group .radio').click(function(){
+        $(this).parent().find('.radio').removeClass('selected');
+        $(this).addClass('selected');
+    });
+    
+  
+
+    })
+    </script>
+</body>
+</html>
+
+</html>
