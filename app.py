@@ -312,11 +312,11 @@ def sampleregistration():
 def ps():
     return render_template('misc/ps.html')
 
-# @app.route('/ps')
-# def psdisp():
-#     mycursor.execute("SELECT * FROM new_student")
-#     result = mycursor.fetchall()
-#     return render_template("ps.html", result=result)
+@app.route('/ps')
+def psdisp():
+    mycursor.execute("SELECT * FROM new_student")
+    result = mycursor.fetchall()
+    return render_template("ps.html", result=result)
 
 
 @app.route('/pt')
